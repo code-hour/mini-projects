@@ -18,14 +18,43 @@ Passport is authentication middleware for Node.js. As it’s extremely flexible 
 
 ## Development
 
-* $ mongod
-* $ npm run dev
+### Pre-requisite
+
+Install mongodb (instructions [here](https://learn-with-me.github.io/Development-Setup-Handbook/mongodb/), if needed)
+
+Install dependencies using `$ pnpm i`
+
+### Start Database
+
+```shell
+# Start the database
+$ brew services start mongodb-community
+or
+$ mongod
+
+# Stop the database
+brew services stop mongodb-community
+```
+
+### Start Application Server
+
+```shell
+$ npm run dev
+```
 
 ## API
 
 * $ POST http://localhost:8000/api/users  {"user":{"email":"a@b.com","password":"test"}}
 * $ GET http://localhost:8000/api/users/current  Header: Authorization: Token {{Token}}
 
+```shell
+curl --location --request POST 'http://localhost:8000/api/users' \
+  --header 'Content-Type: application/json' \
+  --data-raw '{"user":{"email":"a@b.com","password":"test"}}'
+```
+
 ## Reference
 
 * https://medium.freecodecamp.org/learn-how-to-handle-authentication-with-node-using-passport-js-4a56ed18e81e
+* https://github.com/mongodb/homebrew-brew
+* https://mongoosejs.com/docs/5.x/docs/deprecations.html

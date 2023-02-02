@@ -28,8 +28,10 @@ if(!isProduction) {
 }
 
 //Configure Mongoose
-mongoose.connect('mongodb://localhost/passport-tutorial');
+mongoose.set('useNewUrlParser', true);
+mongoose.set('useUnifiedTopology', true);
 mongoose.set('debug', true);
+mongoose.connect('mongodb://localhost/passport-tutorial');
 
 require('./Users');
 require('./passport');
