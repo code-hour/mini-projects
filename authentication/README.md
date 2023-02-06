@@ -20,21 +20,9 @@ Passport is authentication middleware for Node.js. As it’s extremely flexible 
 
 ### Pre-requisite
 
-Install mongodb (instructions [here](https://learn-with-me.github.io/Development-Setup-Handbook/mongodb/), if needed)
-
-Install dependencies using `$ pnpm i`
-
-### Start Database
-
-```shell
-# Start the database
-$ brew services start mongodb-community
-or
-$ mongod
-
-# Stop the database
-brew services stop mongodb-community
-```
+1. Run MongoDB locally via `$ docker-compose up -d`
+2. Install package dependencies using `$ pnpm i`
+3. Verify database using steps [here](https://learn-with-me.github.io/Development-Setup-Handbook/mongodb/).
 
 ### Start Application Server
 
