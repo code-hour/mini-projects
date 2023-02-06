@@ -5,7 +5,7 @@ Small quick utils
 These are several mini projects. To run each of them, you'll need to go into individual folder and execute the script.
 
 ### Authentication
-Playaround with Authentication
+Playground with Authentication examples. Readme [here](./authentication/README.md)
 
 ### Currency Converter
 Bring up the server by running the following command

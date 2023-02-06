@@ -23,6 +23,7 @@ Passport is authentication middleware for Node.js. As it’s extremely flexible 
 1. Run MongoDB locally via `$ docker-compose up -d`
 2. Install package dependencies using `$ pnpm i`
 3. Verify database using steps [here](https://learn-with-me.github.io/Development-Setup-Handbook/mongodb/).
+4. Manage database via Mongo-Express at [http://localhost:8081/](http://localhost:8081/)
 
 ### Start Application Server
 
