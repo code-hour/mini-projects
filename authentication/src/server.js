@@ -28,12 +28,19 @@ if(!isProduction) {
 }
 
 //Configure Mongoose
-mongoose.set('useNewUrlParser', true);
-mongoose.set('useUnifiedTopology', true);
+mongoose.set('strictQuery', false);
 mongoose.set('debug', true);
-mongoose.connect('mongodb://localhost/passport-tutorial');
+mongoose.connect('mongodb://localhost/passport-tutorial', {
+  autoIndex: false, // Don't build indexes
+  maxPoolSize: 10, // Maintain up to 10 socket connections
+  serverSelectionTimeoutMS: 5000, // Keep trying to send operations for 5 seconds
+  socketTimeoutMS: 45000, // Close sockets after 45 seconds of inactivity
+  family: 4 // Use IPv4, skip trying IPv6
+})
+  .then(() => console.log('Connected!'))
+  .catch((e) => console.log(e));
 
-require('./Users');
+require('./users/users-model');
 require('./passport');
 app.use(require('./routes'));
 
