@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "smpp": "^0.3.1"
+    "smpp": "^0.5.1"
   }
 }
